@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the webpage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Willumpp">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        body {
+            background-image: url("background.png");
+            background-color: rgb(13, 13, 13);
+            color: rgb(230, 230, 230);
+        }
+
+        a:link {
+            color: red;
+        }
+
+        /* visited link */
+        a:visited {
+            color: red;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: red;
+        }
+
+        /* selected link */
+        a:active {
+            color: red;
+        }
+
+        .date {
+            color: lime;
+        }
+
+        .inner-column {
+            background-color: rgb(0, 0, 0);
+            border-color: white;
+            border-width: 2px;
+            border-style: solid;
+        
+            -webkit-box-shadow:0px 0px 98px 8px rgba(255,255,255,0.37);
+            -moz-box-shadow: 0px 0px 98px 8px rgba(255,255,255,0.37);
+            box-shadow: 0px 0px 98px 8px rgba(255,255,255,0.37);
+
+
+        }
+
+        .image-seperator {
+            background-image: url("rainbow.png");
+            height: 25px;
+        }
+
+        main img {
+            border-color: white;
+            -webkit-box-shadow:0px 0px 58px 5px rgba(255,255,255,0.23);
+            -moz-box-shadow: 0px 0px 58px 5px rgba(255,255,255,0.23);
+            box-shadow: 0px 0px 58px 5px rgba(255,255,255,0.23);
+
+        }
+
+        #logo {
+            -webkit-box-shadow:0px 0px 58px 5px rgba(255,255,255,0.23);
+            -moz-box-shadow: 0px 0px 58px 5px rgba(255,255,255,0.23);
+            box-shadow: 0px 0px 58px 5px rgba(255,255,255,0.23);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image-seperator"></div>
+
+    <div id="inner-column" class="inner-column" style="min-height: 887px;">
+
+        <header style="border-color: white;">
+            <img id="logo" src="./logo.png" class="center" style="width: 50%; height: 50%;">
+            <h1 class="page-title">Github:  <a href="https://github.com/Willumpp/PlanetBattles">&ltsrc&gt</a></h1>
+            <p class="date">Nov 2021</p>
+            <p>Take a look at my various other projects on <a href="https://github.com/Willumpp">Github</a>. </p>
+            <p>This project made was in <a href="https://gamemaker.io/en">Gamemaker Studio</a>.</p>
+        </header>
+        
+        <main>
+            <h2>Overview</h2>
+            <p>Planet Battles is a peer-to-peer PvP game, which takes place in space. You control a small "spaceship" with a variety of abilities that are used to eliminate the enemy players. You can play rounds up to 4 players in a large map with asteroids floating arround colliding into each other.</p>
+
+            <p>The main menu offers a variety of things to look at for new players. For example, there is the option to look at the <b>How To Play</b> guide, which gives a breif overview on the mechanincs of the game. The logo changes colour depending on the last used spaceship.</p>
+            <img src="main-menu.png" class="center">
+            <img src="help-menu.png" class="center">
+
+            <h2>Hosting</h2>
+            <p>Any player can start a lobby for their friends to join. You can choose the port ot host on. However, you need to port forward in order for anyone to be able to join. Whilst creating a lobby you have a variety of game options to play with.</p>
+            <p>All options are explained by clicking the <b>info</b> button</p>
+            <img src="lobby.png" class="center">
+
+            <h2>Spaceships</h2>
+            <p>Each player has the choice between three different spaceships - each with unique abilities. Red with a spray gun, green with a scatter gun, and blue with a huge laser. Below is the demonstration of green's scatter gun and asteroid defense. Each ability interacts with players and asteroids in different ways offering for expanded gameplay potential</p>
+            <p>Addtionally, each spaceship has varying stats in speed, health, and damage output. For example, the red ship can dash and the blue ship can push asteroids.</p>
+            <img src="green-ability.png" class="center">
+            <img src="red-ability.png" class="center">
+            <img src="blue-ability.png" class="center">
+
+            <h2>Map Events</h2>
+            <p>Throughout a match three random events can take place on the map: wormholes, gamma rays, and black holes</p>
+            <p>Wormholes allow players to teleport accross the map, gamma rays damage the player for idling in a particular region, and black holes attract everything on the map towards the center for elimination.</p>
+            <img src="wormhole.png" class="center">
+            <img src="gamma-rays.png" class="center">
+            <img src="blackhole.png" class="center">
+
+            <h2>Round Ending</h2>
+            <p>When a player is elimiated they're shown this menu. Here they have the opportunity to spectate other players and see how long until they respawn to continue fighting. The round ends when everyone but one player runs out of lives</p>
+            <img src="elimination.png" class="center">
+            <p>Within the <b>Game Over</b> menu, the player can choose another ship (bottom left) and vote a rematch. You can also see a leaderboard of who's won the most games in the past few matches</p>
+            <img src="game-over.png" class="center">
+            
+
+
+
+    
+        </main>
+    </div>
+</body>
+</html>

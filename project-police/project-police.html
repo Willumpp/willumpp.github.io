@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the webpage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Willumpp">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        body {
+            background-image: url("background.png");
+            background-repeat: round;
+            color: rgba(255, 255, 255, 0.828);
+        }
+
+        h1 {
+            color: rgba(255, 255, 255, 0.828);
+        }
+
+        h2 {
+            color: rgb(255,205,66);
+        }
+
+        .date {
+            color: rgb(255,205,66);
+        }
+
+        a:link {
+            color: rgb(255,205,66);;
+        }
+
+        /* visited link */
+        a:visited {
+            color: rgb(255,205,66);
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: rgb(255,205,66);
+        }
+
+        /* selected link */
+        a:active {
+            color: rgb(255,205,66);
+        }
+
+        .inner-column {
+            background-color: rgb(35,119,195);
+            border-color: black;
+            border-width: 24px;
+            border-style: solid;
+            border-radius: 10px;
+
+            -webkit-box-shadow:0px 0px 70px 11px rgba(0,0,0,0.9);
+            -moz-box-shadow: 0px 0px 70px 11px rgba(0,0,0,0.9);
+            box-shadow: 0px 0px 70px 11px rgba(0,0,0,0.9);
+
+        }
+
+        .image-seperator {
+            background-image: url("lights.png");
+        }
+
+        main img {
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 0px;
+        }
+
+        #logo {
+            border-color: black;
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 10px;
+            width: 60%; 
+            height: 60%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="inner-column" class="inner-column" style="min-height: 887px;">
+        <header style="border-width: 0;">
+            <div>
+                <img id="logo" src="./logo.png" class="center" style="">
+                <h1 class="page-title">Github:  <a href="https://github.com/Willumpp/ProjectPolice">&ltsrc&gt</a></h1>
+                <p class="date">Jul 2019</p>
+                <p>Take a look at my various other projects on <a href="https://github.com/Willumpp">Github</a>. </p>
+                <p>This project is signicant to me as it was my first project working with 3D graphics. I developed this in <b>Unity</b> and <b>C#</b> as an attempt to make a fun game that was also educational for me. I also made use of <b>Blender</b> to make some of the assets.</p>
+            </div>
+            <div class="image-seperator"></div>
+        </header>
+        
+        <main>
+            <h2>Overview</h2>
+            <p>A simple 3D game where you havet to drive around a procedurally generatred map to escape from police vehicles. The police who chase you get progressively stronger with more reinforcements. As you play, you gain coins to unlock a few more vehicles. Each vehicle has different stats to suit playstyles.</p>
+            <img src="example1.png" class="center">
+            <img src="example2.png" class="center">
+            
+            <h2>Vehicles</h2>
+            <p>The player has several different vehicles to choose from after unlocking them through points. These vehicles differ in stats, such as, speed and health. Press <b>F2</b> to cheat in points. The purpose of these was to learn <b>Blender</b> and usage of materials in <b>Unity</b>.</p>
+            <img src="vehicles.png" class="center">
+            <p>You can also drive the vehicles around in the main menu.</p>
+            <img src="vehicles2.png" class="center">
+            <p>Additionally, the police have stronger vehicles which spawn in as the game progresses. First is a regular "police car".</p>
+            <img src="vehicles3.png" class="center">
+            <p>Theres also a "police truck".</p>
+            <img src="vehicles4.png" class="center">
+            <p>And finally theres a "military vehicle".</p>
+            <img src="vehicles5.png" class="center">
+            <p>As seen in the screenshots, theres also a variety of scenery that spawns as you progress through the map.</p>
+
+            <h2>Health & Score</h2>
+            <p>Your health is decreased from vehicle impact or progressively decreases when you are flipped over. This enables for the enemy police vehicles to topple you to result in a game over. The longer you survive, the higher score you gain. Score can be used as points to buy new vehicles in the main menu.</p>
+            <img src="game-over.png" class="center">
+
+            <p>You can see a scoreboard of your previous games. Your highest ever score is displayed at the top. The purpose of this was to demonstrate saving data after the game is closed.</p>
+            <img src="scoreboard.png" class="center">
+            
+
+        </main>
+        
+    </div>
+</body>
+</html>

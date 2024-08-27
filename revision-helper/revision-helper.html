@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the webpage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Willumpp">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        body {
+            background-image: url("example1.png");
+            background-repeat: round;
+            color: black;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        .date {
+            color: darkred;
+        }
+
+        a:link {
+            color: blue;;
+        }
+
+        /* visited link */
+        a:visited {
+            color: blue;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: blue;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+
+        .inner-column {
+            background-image: url("paper.png");
+            background-color: white;
+            border-color: rgb(242,242,242);
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 10px;
+
+            
+            -webkit-box-shadow:0px 0px 15px 8px rgba(25,26,26,0.09);
+            -moz-box-shadow: 0px 0px 15px 8px rgba(25,26,26,0.09);
+            box-shadow: 0px 0px 15px 8px rgba(25,26,26,0.09);
+
+        }
+
+        .image-seperator {
+            background-image: url("notepad.png");
+        }
+
+        main img {
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image-seperator"></div>
+    <div id="inner-column" class="inner-column" style="min-height: 887px;">
+        <header style="border-color: black;;">
+            <div>
+                <h1 class="page-title">Revision Helper <a href="https://github.com/Willumpp/RevisionHelper">&ltsrc&gt</a></h1>
+                <p class="date">Jun 2020</p>
+                <p>Take a look at my various other projects on <a href="https://github.com/Willumpp">Github</a>. </p>
+                <p>This project serves importance to me as I used this to help me through my GCSEs and A-Levels for revision. This project was made in <b>Python</b>. It runs in the terminal as I never got round to making a GUI.</p>
+            </div>
+        </header>
+        
+        <main>
+            <h2>Overview</h2>
+            <p>This is a basic terminal tool used for revising notes in a file tree. The tool makes use of a custom "programming language" that determines the flow of the revision tool or how it reveals information to be recalled. Here is an example of it working:</p>
+            <img src="revision-example1.png" class="center">
+            <p>After each consecutive line the program pauses waiting for the user to hit <b>Enter</b> to continue to the next text prompt. The user is supposed to recall to themselves the information that will be revealed - much like a flash card.</p>
+            <img src="revision-example2.png" class="center">
+            <p>For example, in this case, the user is supposed the recite the missing words denoted by a "_____". When the user feels like they've got the correct answer, they press enter to reveal the original sentence:</p>
+            <img src="revision-example3.png" class="center">
+            <p>Thats the core of the program. It follows this mechanic to reveal revision notes in different ways depending on the user's preference.</p>
+            
+            
+            <h2>Commands & Syntax</h2>
+            <p>The program scans a file tree of text documents containing these commands. When a text file is hit containing revision notes, random lines are selected until a successful command is found. For example, commands starting with "<b>-</b>" can be randomly selected and revealed in the terminal.</p>
+            <p>The intention of this tool was to mix a "programming language" with revision notes. The result is a list of useful commands that control the flow of revision:</p>
+            <img src="commands.png" class="center">
+            <p>A breif breakdown of each command/wildcard:</p>
+            <ul style="list-style-type: none;">
+                <li><p><b>-</b> : This line is selected at random when the txt is hit, random words are removed.</p></li>
+                <li><p><b>=</b> : This line is <b>always</b> selected when the txt is hit, random words are removed.</p></li>
+                <li><p><b>#</b> : This is a comment. The program ignores these.</p></li>
+                <li><p><b>[ ]</b> : This is a list of numbers used to index the prompt to remove specific words. (see example above)</p></li>
+                <li><p><b>*</b> : This defines a list component. When surrounded by a list command, this line is read depending on the list rules.</p></li>
+                <li><p><b>*[ ]</b> : This defines a list component with specific removal of words. Combined functionlity of * and [ ].</p></li>
+                <li><p><b>CLS</b> : This defines the start of a consecutive list (see example above). Every press of <b>enter</b> reveals each line of the list one-by-one whilst removing words in the prompt at random.</p></li>
+                <li><p><b>CLE</b> : This defines the end of a consecutive list.</p></li>
+                <li><p><b>RLS</b> : This defines the start of a reveal list (see example above). Press <b>enter</b> to reveal <b>every</b> line of the list <b>at once</b> without any random removed words up until a breakpoint is hit.</p></li>
+                <li><p><b>RBP</b> : This defines a breakpoint in a reveal list. This is used to chunk up a reveal list into multiple sections.</p></li>
+                <li><p><b>RLE</b> : This defines the end of a reveal list</p></li>
+            </ul>
+            
+
+            <h2>File Tree</h2>
+            <p>The program uses the root of a file tree to locate different sets of cards. Upon loading the program, you enter the directory of the root folder you wish to trace to reveal cards. The file tree can contain folders within folders if desired (for organisation), but must contain at least one text file containing the revision notes.</p>
+            <p>This, for example, is one folder of folders relating to my Computer Science notes.</p>
+            <img src="folders1.png" class="center">
+            <p>Within the <b>Applications Generation</b> folder I store a bunch of text files (ignore the Stages.jpg).</p>
+            <img src="folders2.png" class="center">
+            <p>Within the <b>Translator stages.txt</b> file I store my revision notes.</p>
+            <img src="example1.png" class="center">
+            <p>All folders and files can follow this structure to help you revise for you exams.</p>
+
+
+
+
+        </main>
+        
+    </div>
+</body>
+</html>

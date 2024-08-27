@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the webpage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Willumpp">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        body {
+            background-image: url("background.png");
+            background-repeat: round;
+            color: black;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        .date {
+            color: darkred;
+        }
+
+        a:link {
+            color: red;;
+        }
+
+        /* visited link */
+        a:visited {
+            color: red;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: red;
+        }
+
+        /* selected link */
+        a:active {
+            color: red;
+        }
+
+        .inner-column {
+            background-image: url("background2.png");
+            border-color: rgb(115,135,78);
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 10px;
+
+            -webkit-box-shadow:0px 0px 26px 15px rgba(85,194,89,0.17);
+            -moz-box-shadow: 0px 0px 26px 15px rgba(85,194,89,0.17);
+            box-shadow: 0px 0px 26px 15px rgba(85,194,89,0.17);
+        }
+
+        .image-seperator {
+            background-image: url("notepad.png");
+        }
+
+        main img {
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image-seperator"></div>
+    <div id="inner-column" class="inner-column" style="min-height: 887px;">
+        <header style="border-color: black;;">
+            <div>
+                <h1 class="page-title">Pathfinder <a href="https://github.com/Willumpp/Pathfinder">&ltsrc&gt</a></h1>
+                <p class="date">Jun 2020</p>
+                <p>Take a look at my various other projects on <a href="https://github.com/Willumpp">Github</a>. </p>
+                <p>I originally made this with the intention of finding the best routes around my highschool. Idea of this was to be able to draw on a grid to demostrate A* pathfinding. The gimmick with this, however, is that you can overlay onto two different images to solve a path for.</p>
+                <p>Made with <a href="https://github.com/pygame/pygame">pygame</a> (pygame is a required to be installed)<p>
+            </div>
+        </header>
+        
+        <main>
+            <h2>Overview</h2>
+            <p>A simiple A* pathfinding tool with the intention of fitting the path to an image. The user uses the inbuilt drawing tool to carve out a path that follows an image. For example, this graphic of a hedge maze:</p>
+            <img src="example1.png" class="center">
+            <p>Using the basic drawing tools the program provides, I carved out a path on the original jpeg. After placing the start and end nodes, you can begin the pathfinding process. Here is the original image:</p>
+            <img src="first.jpeg" class="center">
+            <p>The motivation of this was to apply this to any maze or map of a building to find the shortest route through it.</p>
+            
+            <h2>The Brush</h2>
+            <p>With the brush you can either paint a wall or cave out empty space. The brush can also be changed in size to suit your needs.</p>
+            <img src="brushes.png" class="center" style="width: 75%; height: 50%;">
+            <p><i>Honestly, drawing a pixel circle is harder than it looks.</i></p>
+            <p>You can also hold <b>shift</b> or <b>ctrl</b> to draw in perfectly straight lines on the x and y axis</p>
+            <img src="lines.png" class="center">
+            <p>After you are finished with a drawing you can save it for later use. This retains the drawing after closing the program. So for example, I can carve out a path for this image:</p>
+            <img src="second.jpeg" class="center">
+            <img src="example2.png" class="center">
+            <img src="example3.png" class="center">
+            <p>The pale blue line through the middle is the shortest path found. (Keep in mind it may not be <b>the</b> shortest path)</p>
+
+            <h2>Controls</h2>
+            <ul>
+                <li>
+                    <p>1 : Previous state selection</p>
+                </li>
+
+                <li>
+                    <p>2 : Next state selection</p>
+                </li>
+
+                <li>
+                    <p>+ : Increase brush radius</p>
+                </li>
+
+                <li>
+                    <p>- : Decrease bursh radius</p>
+                </li>
+
+                <li>
+                    <p>3 : Print cell f,g,h values</p>
+                </li>
+
+                <li>
+                    <p>Right key : Increment step of pathfinding by 1</p>
+                </li>
+
+                <li>
+                    <p>Left key : Peform pathfinding algorithm</p>
+                </li>
+
+                <li>
+                    <p>Down key : Move down a floor</p>
+                </li>
+
+                <li>
+                    <p>Up key : Move up a floor</p>
+                </li>
+
+                <li>
+                    <p>Shift : Snap to y axis</p>
+                </li>
+
+                <li>
+                    <p>Ctrl key : Snap to x axis</p>
+                </li>
+
+                <li>
+                    <p>s : Save drawing. This loads every time the floor is changed or the program is reset</p>
+                </li>
+
+                <li>
+                    <p>r : Reset drawing</p>
+                </li>
+
+                <li>
+                    <p>e : Place end node. <b>Must be placed before start node</b></p>
+                </li>
+
+                <li>
+                    <p>q : Place start node. <b>Must be placed after end node</b></p>
+                </li>
+            </ul>
+        </main>
+        
+    </div>
+</body>
+</html>

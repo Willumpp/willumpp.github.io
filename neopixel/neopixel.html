@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the webpage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Willumpp">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        body {
+            background-image: url("background.png");
+            background-color: rgb(13, 13, 13);
+            color: rgb(230, 230, 230);
+        }
+
+        .inner-column {
+            background-color: rgb(28, 28, 28);
+        }
+
+        .image-seperator {
+            background-image: url("rainbow.png");
+            height: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image-seperator"></div>
+
+    <div id="inner-column" class="inner-column" style="min-height: 887px;">
+
+        <header>
+            <h1 class="page-title">NeoPixel Control Panel <a href="https://github.com/Willumpp/NeoPixel-Control-Panel">&ltsrc&gt</a></h1>
+            <p class="date">Nov 2022</p>
+            <p>Take a look at my various other projects on <a href="https://github.com/Willumpp">Github</a>. </p>
+        </header>
+        
+        <main>
+            <p>Provides a very simple interface for controling the WS2812B (or alternative) LED strip. Program provides a timeline, event-sequencing nodes, and a preview of the strip to create unique animations. Animations can be saved to an external file to be opened by the program.</p>
+            <img src="neopixel.png" class="center">
+    
+            <h2>Setup</h2>
+            <p>To run the control panel, run <b>main.py</b> on a machine with pygame. This file will display a control panel to animate the LED Strip. <b>reciever.py</b> must be run on a RaspberryPi with the the correct libraries installed. Make sure "OFFLINE_MODE" is set to false and the "HOST_ADDRESS" is set to the IP of the RaspberryPi. This means when running <b>reciever.py</b>" on the RaspberryPi and <b>main.py</b> on the controlling device, all strip pixel data should be sent to "reciever.py" and stored in the strip preview. If running pygame on within the file, you should see a window with the recieved strip data like this (created from <b>reciever.py</b>):</p>
+            <img src="strip-preview.png" class="center">
+            <p>The above preview is a result from the data sent in <b>main.py</b>:</p>
+            <img src="main.png" class="center">
+            <p>Python software and required libraries for the RaspberryPi can be found <a href="https://learn.adafruit.com/neopixels-on-raspberry-pi/python-usage">here</a>. Note that you also need numpy and pygame to be installed on both the sender and reciever. Information about circuitry and wiring for the neopixel can be found <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/basic-connections">here</a></p>
+            
+            <h2>Nodes</h2>
+            <p>Similar to animating, the interface consists of a timeline, keyframes, and transitions between. There are also a few different types of keyframes to use. Simply click a node to change its colour properties. When a node is selected, you can click on the colour wheel or change the individual RGB values to edit the node's colour properties.</p>
+            <p>Hit <b>spacebar</b> to restart the animation. This will move the timeline bar to the start of the animation. The bar will then progress through the animation triggering any nodes it hits. The priority of the nodes in the same column is top node is triggered first, whereas bottom is last. For example, imagine a context where a fill node was placed at the top and a single pixel node at the bottom of the same column. When the timeline bar hits both at the same time, the strip will be filled then a single pixel will be placed.</p>
+
+
+            <h2>Single pixel node: (<b>F1</b>)</h2>
+            <p>This allows you to change and interact with only one pixel on the strip.</p>
+            <img src="./single-pixel.png" class="center">
+
+            <h2>Fill node: (<b>F2</b>)</h2>
+            <p>This allows you to fill the entire strip with a single colour.</p>
+            <img src="./fill.png" class="center">
+    
+            <h2>Gradient node: (<b>F3</b>)</h2>
+            <p>When first placing this you choose the number of gradient "nodes" you would like. After inputing a number, re-select the gradient node. This will display the <b>Pixel Index</b> of each sub-node. This is used to change the position of the gradient sub-nodes. You can click the white rectangles on the preview to change the colour of that position. As a result, a gradient will form.</p>
+            <img src="./gradient.png" class="center">
+    
+            <h2>Start node (<b>F4</b>) and Terminate node (<b>F5</b>)</h2>
+            <p>Place a Start node where the animation should start and the Terminate node where the animation should repeat. A terminate node will cause the animation to loop forever, ending each loop when the timeline bar hits the node. The bar will reset at the position of the start node.</p>
+            <img src="./gradient.png" class="center">
+
+            <p>Each node can be selected for placement using the pressed "F-Key" and placed using <b>left-click</b>. When selecting a node for placement, the node will snap to a grid on the timeline. Wheen a node is placed, it can be selected for editing using <b>left-click</b>. In the appeared menu, most relevant properties of the node can be edited.</p>
+            <p>With a selected node, holding <b>shift</b> and left clicking another node <i>on the same row of the same node type</i> will result in a <b>transition</b> being created (This is represented by a bar connecting the two nodes). The transition can be selected using <b>left-click</b>. Here you can edit the properties of the transition for each variable between the nodes. When the timeline bar passes through the transition, an interpolation between the two variables of each node will be represented on the strip. For example, a transition between two fill nodes will result in a smooth colour transition on the strip.</p>
+    
+    
+        </main>
+    </div>
+</body>
+</html>

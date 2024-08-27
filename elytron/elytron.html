@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the webpage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Willumpp">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        body {
+            background-image: url("background2.png");
+            background-repeat: round;
+            color: #b8b8b8;
+        }
+
+        h1 {
+            color: #d0d0d0;
+        }
+
+        h2 {
+            color: rgb(17, 194, 41)
+        }
+
+        .date {
+            color: rgb(13, 219, 41);
+        }
+
+        a:link {
+            color: rgb(13, 219, 41);;
+        }
+
+        /* visited link */
+        a:visited {
+            color: rgb(13, 219, 41);;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: rgb(13, 219, 41);;
+        }
+
+        /* selected link */
+        a:active {
+            color: rgb(13, 219, 41);;
+        }
+
+        .inner-column {
+            background-image: url("bricks.png");
+            background-color: #383838;
+        }
+
+        .image-seperator {
+            background-image: url("wall.png");
+        }
+
+        main img {
+            border-color: #130120;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image-seperator"></div>
+    <div id="inner-column" class="inner-column" style="min-height: 887px;">
+        <header style="border-bottom: 0;">
+            <div>
+                <h1 class="page-title">Elytron <a href="https://github.com/Willumpp/Elytron/tree/main">&ltsrc&gt</a></h1>
+                <p class="date">Dec 2018</p>
+                <p>Take a look at my various other projects on <a href="https://github.com/Willumpp">Github</a>. </p>
+                <p>This project was made in <a href="https://gamemaker.io/en">Gamemaker Studio</a>. This project is special to me as it was my first ever programming project made for the BaftaYGD competition. I entered the competition to start learning programming and game development (and, of course, to have fun). I started development on this as a 15 year old; so, it was impressive to me at the time.</p>
+            </div>
+            <div class="image-seperator"></div>
+        </header>
+        
+        <main>
+            <h2>Overview</h2>
+            <p>Elytron is an award winning, top-down, tower defence game where you must defend yourself from waves of beetles, which can vary in strength.</p>
+            <p>By defeating a beetle, you earn gold for the shop. The shop allows you to prepare for the next wave of beetles with more or stronger turrets, better weapons, or even a mine field. Find your own way to defeat the army of beetles, and challenge yourself however you like with a hard mode!</p>
+
+            <img src="main-menu.png" class="center">
+
+            <h2>Controls</h2>
+            <ul>
+                <li>
+                    <p>WASD or ARROW KEYS to move</p>
+                </li>
+
+                <li>
+                    <p>NUMBER KEYS to change weapon</p>
+                </li>
+
+                <li>
+                    <p>SPACEBAR or MOUSE LEFT CLICK use your weapon</p>
+                </li>
+
+                <li>
+                    <p>R to reset position</p>
+                </li>
+
+                <li>
+                    <p>P to pause</p>
+                </li>
+
+                <li>
+                    <p>F1 - F4 for cheats</p>
+                </li>
+            </ul>
+
+            <img src="code.png" class="center">
+
+            <div class="image-seperator"></div>
+
+            <h2>Extra Information</h2>
+            <ul>
+                <li>
+                    <p>Difficulty modes determine damage dealt and shield presence</p>
+                </li>
+
+                <li>
+                    <p>The shop is only accessible between waves</p>
+                </li>
+
+                <li>
+                    <p>Victory is awarded once Wave 15 is defeated, however you may decide to continue playing</p>
+                </li>
+
+                <li>
+                    <p>The shield takes the same amount of damage from every beetle</p>
+                </li>
+
+                <li>
+                    <p>The shield is a temporary defence so it cannot be repaired</p>
+                </li>
+            </ul>
+
+            <h2>Boss Wave</h2>
+            <p>Upon reaching wave 15, you must defeat the boss to win the game. After this, a victory screen is triggered.</p>
+            <img src="boss-wave.png" class="center">
+
+            <h2>Shop Menu</h2>
+            <p>After each wave you have the opportunity to use the shop. The currency used is gold, which is gained from killing beetles. The purchase options are as labelled:</p>
+            <img src="shop-menu.png" class="center">
+
+            <h2>Turrets</h2>
+            <p>Elytron offers a variety of 3 turrets with different strengths: The gun turret (dark grey), assault turret (ligt grey), and the laser turret (light grey and red). </p>
+            <img src="turrets.png" class="center">
+
+            <h2>Cheats</h2>
+            <p>As this project was mainly just for fun, a variety of cheats are offered, such as the power gun. Press the function keys to see the other cheats</p>
+            <img src="power-gun.png" class="center">
+
+        </main>
+        
+    </div>
+    <div class="image-seperator"></div>
+</body>
+</html>

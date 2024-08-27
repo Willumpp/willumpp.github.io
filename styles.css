@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(15px + 0.3vw);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    grid-template-rows: auto 1fr auto;
+    display: grid;
+    min-height: 100vh;
+}
+
+header {
+    font-style: italic;
+    margin: 0 2.5%;
+    border-bottom: 10px solid pink;
+}
+
+header h1 {
+    font-size: calc(24px + 1.75vw);
+}
+
+main img {
+    border-color: pink;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+
+    min-height: 11em;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+main h2 {
+    margin-top: 8vh;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    height: 24vw;
+}
+
+
+main {
+    margin: 10px 2.5%;
+}
+
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: red;
+}
+
+/* mouse over link */
+a:hover {
+    color: red;
+}
+
+/* selected link */
+a:active {
+    color: red;
+}
+
+.inner-column {
+    max-width: 70vw;
+    width: 70vw;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.image-seperator {
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+}
+
+.date {
+    font-style: italic;
+    color: pink;
+}
+
+.image-list ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.image-list ul li {
+    margin: 4em 3% 4em;
+    height: 11em;
+}
+
+.image-list ul .large {
+    height: 18vw;
+    min-height: 11em;
+}
+
+.image-list div {
+    float: left
+}
+
+.image-list .image {
+    height: 100%;
+    margin-right: 1em;
+}
+
+
+.image-list .content {
+    left: 25%;
+    margin: 1% 1% 8vh;
+    max-width: 50em;
+}
+
+
+.image-list .date {
+    margin: 0;
+    font-size: 1em;
+}
+
+.image-list .image-header {
+    margin: 0 0 2px;
+}
+
+.image-list img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 10px;
+}

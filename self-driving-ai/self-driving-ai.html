@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the webpage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Willumpp">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        h2 {
+            color: red
+        }
+
+        .date {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="page-title">Self Driving AI <a href="https://github.com/Willumpp/SelfDrivingAI">&ltsrc&gt</a></h1>
+        <p class="date">Jan 2023</p>
+        <p>Take a look at my various other projects on <a href="https://github.com/Willumpp">Github</a>. </p>
+    </header>
+    
+    <main>
+        <h2>Setup</h2>
+        <p>To run the control panel, run <b>main.py</b> on a machine with pygame. This file will display a control panel to animate the LED Strip. <b>reciever.py</b> must be run on a RaspberryPi with the the correct libraries installed. Make sure "OFFLINE_MODE" is set to false and the "HOST_ADDRESS" is set to the IP of the RaspberryPi. This means when running <b>reciever.py</b>" on the RaspberryPi and <b>main.py</b> on the controlling device, all strip pixel data should be sent to "reciever.py" and stored in the strip preview. If running pygame on within the file, you should see a window with the recieved strip data like this (created from <b>reciever.py</b>):</p>
+    </main>
+</body>
+</html>
