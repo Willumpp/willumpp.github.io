@@ -13,17 +13,55 @@
         .date {
             color: darkred;
         }
+
+        /* unvisited link */
+        a:link {
+            color: blue;
+        }
+
+        /* visited link */
+        a:visited {
+            color: blue;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: blue;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1 class="page-title">Hello! I am Will.</h1>
         <p>Take a look at my various projects. Click on the links or view the code on <a href="https://github.com/Willumpp">Github</a>. All projects are completed for the purpose of learning about Computer Science & Programming; advancing my knowledge in the field.</p>
+        <p>I am currently an undergraduate programmer currently studying <b>BSc Computer Science</b> at the <b>University of Manchester</b>. I started picked programming up as a hobby in 2018 and have since started dedicating much of my time to the field and learning as I create small projects</p>
     </header>
     
     <main>
         <div class="image-list">
             <ul>
+                <li>
+                    <div class="image">
+                        <a href="./self-driving-ai/self-driving-ai.html">
+                            <img src="./self-driving-ai/Genetic.png" href>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <a href="./self-driving-ai/self-driving-ai.html">
+                            <h2 class="image-header">Self Driving AI</h2>
+                        </a>
+                        <p class="date">Jan 2023</p>
+                        <p><i>Made with <b>Python, numpy, and pygame</b>. Used <b>machine learning, graphics, GUIs, SQL database management, and pathfinding algorithms</b>. A <b>coursework project</b></i>.</p>
+                        <p>Used to carry out performance tests on custom made tracks using a machine learning algorithm against two different pathfinding algorithms.</p>
+                    </div>
+                </li>
+
+
                 <li>
                     <div class="image">
                         <a href="./neopixel/neopixel.html">
@@ -35,6 +73,7 @@
                             <h2 class="image-header">NeoPixel Control Panel</h2>
                         </a>
                         <p class="date">Nov 2022</p>
+                        <p><i>Made with <b>Python, numpy, and pygame</b> and the <b>RaspberryPi</b>. Used <b>networking, graphics, and microcontrollers</b>. A <b>personal project</b></i>.</p>
                         <p>Control panel and animator for an addressable LED strip.</p>
                     </div>
                 </li>
@@ -52,7 +91,8 @@
                             <h2 class="image-header">Planet Battles</h2>
                         </a>
                         <p class="date">Nov 2021</p>
-                        <p>A multiplayer, PvP video game inspired from the retro arcade game “Asteroids”, where the player uses a variety of abilities/weapons to attack the other players.</p>
+                        <p><i>Made with <b>Gamemaker and GLSL</b>. Used <b>networking and graphics</b>. A <b>teamwork project</b> and <b>competition entry</b></i>.</p>
+                        <p>A <b>co-op multiplayer</b>, PvP video game inspired from the retro arcade game “Asteroids”, where the player uses a variety of abilities/weapons to attack the other players.</p>
                         <p>Takes place in space and includes random events such as wormholes, gamma rays, and black holes</p>
                     </div>
                 </li>
@@ -68,6 +108,7 @@
                             <h2 class="image-header">Pathfinder</h2>
                         </a>
                         <p class="date">Sep 2021</p>
+                        <p><i>Made with <b>Python</b>. Used <b>algorithms and graphics</b>. A <b>personal project</b>.</i></p>
                         <p>An A* pathfinding tool used to draw on images. Made entirely with <a href="https://github.com/pygame/pygame">pygame</a>.</p>
                     </div>
                 </li>
@@ -83,6 +124,7 @@
                             <h2 class="image-header">Revision Helper</h2>
                         </a>
                         <p class="date">Jun 2020</p>
+                        <p><i>Made with <b>Python</b>. A <b>personal project</b>.</i></p>
                         <p>A revision tool that makes use of a file tree of flash cards to reveal to the user.</p>
                     </div>
                 </li>
@@ -98,6 +140,7 @@
                             <h2 class="image-header">Project Police</h2>
                         </a>
                         <p class="date">Jul 2019</p>
+                        <p><i>Made with <b>C# and Unity</b>. Used <b>graphics, 3D moddelling, and procedural generation</b>. A <b>personal project</b>.</i></p>
                         <p>My first 3D game made with Unity.</p>
                     </div>
                 </li>
@@ -114,6 +157,7 @@
                             <h2 class="image-header">Elytron</h2>
                         </a>
                         <p class="date">Dec 2018</p>
+                        <p><i>Made with <b>Gamemaker</b>. A <b>personal project and competition entry</b>.</i></p>
                         <p>A singleplayer action game where the player defends against alien creatures and progresses through
                             rounds getting stronger (with rewards and upgrading weapons).</p>
                         <p>My first “large” programming project to design a game for the national BaftaYGD competition, achieving

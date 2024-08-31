@@ -3,43 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A brief description of the webpage">
+    <meta name="description" content="My portfolio page for the Self Driving AI project">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Willumpp">
 
-    <title>Document</title>
+    <title>Self Driving AI</title>
     <link rel="stylesheet" href="../styles.css">
 
     <style>
         body {
-            background-color: rgb(255, 255, 255);
-            color: rgb(0, 0, 255);
+            background-image: url("background.png");
+            background-color: #D8EBCD;
+            background-repeat: round;
+            color: black;
         }
 
         h1 {
-            color: blue;
+            color: black;
         }
 
         h2 {
-            color: red
+            color: black;
         }
 
         .date {
+            color: darkred;
+        }
+
+        a:link {
+            color: red;;
+        }
+
+        /* visited link */
+        a:visited {
             color: red;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: red;
+        }
+
+        /* selected link */
+        a:active {
+            color: red;
+        }
+
+        .inner-column {
+            background-image: url("background2.png");
+            background-color: #e2ebde;
+            border-color: rgb(115,135,78);
+            border-style: solid;
+            border-radius: 10px;
+
+            -webkit-box-shadow:0px 0px 26px 15px rgba(85,194,89,0.17);
+            -moz-box-shadow: 0px 0px 26px 15px rgba(85,194,89,0.17);
+            box-shadow: 0px 0px 26px 15px rgba(85,194,89,0.17);
+        }
+
+        .image-seperator {
+            background-image: url("line-banner.gif");
+            height: 100px;
+        }
+
+        main img {
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 0px;
         }
 
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="page-title">Self Driving AI <a href="https://github.com/Willumpp/SelfDrivingAI">&ltsrc&gt</a></h1>
-        <p class="date">Jan 2023</p>
-        <p>Take a look at my various other projects on <a href="https://github.com/Willumpp">Github</a>. </p>
-    </header>
-    
-    <main>
-        <h2>Setup</h2>
-        <p>To run the control panel, run <b>main.py</b> on a machine with pygame. This file will display a control panel to animate the LED Strip. <b>reciever.py</b> must be run on a RaspberryPi with the the correct libraries installed. Make sure "OFFLINE_MODE" is set to false and the "HOST_ADDRESS" is set to the IP of the RaspberryPi. This means when running <b>reciever.py</b>" on the RaspberryPi and <b>main.py</b> on the controlling device, all strip pixel data should be sent to "reciever.py" and stored in the strip preview. If running pygame on within the file, you should see a window with the recieved strip data like this (created from <b>reciever.py</b>):</p>
-    </main>
+    <div class="image-seperator"></div>
+    <div id="inner-column" class="inner-column" style="min-height: 887px;">
+        <header style="border-color: black;">
+            <div>
+                <h1 class="page-title">Self Driving AI <a href="https://github.com/Willumpp/SelfDrivingAI">&ltsrc&gt</a></h1>
+                <p class="date">Jan 2023</p>
+                <p>Take a look at my various other projects on <a href="https://github.com/Willumpp">Github</a>. </p>
+                <p><i>Made with <b>Python, numpy, and pygame</b>. Used <b>machine learning, graphics, GUIs, SQL database management, and pathfinding algorithms</b>. A <b>coursework project</b></i>.</p>
+                <p>Used to carry out performance tests on custom made tracks using a machine learning algorithm against two different pathfinding algorithms.</p>
+                <p>Made with <a href="https://github.com/pygame/pygame">pygame</a> (pygame is a required to be installed)<p>
+            </div>
+        </header>
+        
+        <main>
+            <h2>Overview</h2>
+            <p>A coursework project for my A-Level computer science unit. The project looks at testing "vehicles" in a simulation with different algorithms to navigate them accross a track. The algorithms used are reinforcement learning, A* pathfinfing, and a heuristic based algorithm. All results are stored in an external SQLite database for the user to analyse as they see fit. Testing can take place on one of the inbuilt tracks or a custom made track with the track building tool.</p>
+            <p>This is the A* pathfinding algorithm:</p>
+            <img src="astar.gif" class="center">
+            <p>This is the wandering algorithm:</p>
+            <img src="avoidance.gif" class="center">
+            <p>This is the genetic algorithm learning:</p>
+            <img src="genetic-learning.gif" class="center">
+            
+            <h2>Algorithms</h2>
+            <p>This project makes use of three different algorithms: A machine learning/reinforcement learning/genetic algorithm, an A* pathfinding algorithm, and a wandering algorithm.</p>
+            
+            <h3>Genetic Algorithm</h3>
+            <p>This algorithm is based on the idea of evolution and trial and error within diverse generations of vehicles. For instance, from a set of 30 vehicles with completely random parameters for determing when to turn at what wall distance, at least one is going to get a bit far. If that succeeds, this vehicle is selected for the next generation. And this cycle continues until a working car makes it to the end.</p>
+            <img src="genetic.gif" class="center">
+            
+            <h3>A* Pathfinding Algorithm</h3>
+            <p>Upon starting the simulation a path is found through the track using an A* pathfinding algorihtm. See <a href="../pathfinder/pathfinder.html">Pathfinder</a> for another project using this. The path generated from the algorithm is then interpolated between nodes with multiple <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">cubic bézier curves</a> in order to form a continuous path.</p>
+            <img src="astar2.png" class="center">
+            <img src="astar2.gif" class="center">
+            <p>The vehicle offroading is accounted for in the results database. The longer it spends offroading, the more its recognised as an error in driving. </p>
+            <p>Credit to <a href="http://www.red3d.com/cwr/steer/">this source</a> to help me with the steering behaviours.</p>
+            
+            <h3>Wandering/Obstacle Avoidance</h3>
+            <p>From the vehicle, three "rays" are casted out to determine the distance of the closest walls in each direction. Using this, the vehicle can steer away form walls, speed up, or slow down. The result is a very careful and error free driver for the track.</p>
+            <img src="avoidance.gif" class="center">
+            
+            <p>Credit to <a href="http://www.red3d.com/cwr/steer/">this source</a> to help me with the steering behaviours.</p>
+
+
+            <h2>Tracks</h2>
+            <p>The user has 5 tracks to choose from initially.</p>
+            <img src="tracks.png" class="center">
+            <div class="gallery">
+                
+            </div class="gallery">
+            <div class="gallery-column">
+                <p>Meander Track</p>
+                <img src="meander.gif" alt="Meander track">
+            </div>
+            
+            <div class="gallery-column">
+                <p>Square Track</p>
+                <img src="square.gif" alt="Square track">
+            </div>
+            
+            <div class="gallery-column">
+                <p>Straight Line Track</p>
+                <img src="line.gif" alt="Line track">
+            </div>
+            
+            <div class="gallery-column">
+                <p>Turns Track</p>
+                <img src="turns.gif" alt="Turns track">
+            </div>
+            
+            <p>You can also create your own track with the inbuilt track editor. This is made so you can be a bit more creative with the testing and allow for more unique situations.</p>
+            <p>This is the main menu for the track editor:</p>
+            <img src="trackeditor1.png" class="center" alt="Track editor">
+            <p>This is the interface for the track editor with the connection options. This track is named "TrackTest1"</p>
+            <img src="track-creator.gif" class="center" alt="Track editor">
+            <p>Upon saving it appears in the main menu:</p>
+            <img src="trackeditor2.png" class="center" alt="Track editor">
+            <p>And here it is being tested with the A* pathfinding algorithm:</p>
+            <img src="track-demonstration.gif" class="center" alt="Track editor">
+            
+            <h2>GUI</h2>
+            <p>The GUI in use is <b>entirely made from scratch with pygame</b>. <a href="https://github.com/Willumpp/PygameUI">This is the library</a> I put together whilst making this project.</p>
+            <p>The library offers a range of widgets to place on the screen. These include text input fields, buttons, and pictures. Addiitonally, it can update any objects on the screen every frame. Each scene is split into a "layer" where only active layers are exectued every frame.</p>
+
+            
+            <h2>Settings</h2>
+            <p>Theres a variety of settings to choose from and change for when testing these vehicles. Settings range from cosmetics to changing the physics of the test environment; so, you can test a variety of situations.</p>
+            <p><i>(Elasticity and friction have no functionality).</i></p>
+            <img src="settings1.png" class="center" alt="Settings menu">
+            <p>Additionally each algorithm has their own unique setttings. For example, this is the genetic algorithm settings.</p>
+            <p>Mutation rate refers to the chance that the best performing vehicle gets chosen for mutation. The mutation chance refers to the proportion of genes that are inherited for each vehicle in the next generation.</p>
+            <img src="settings2.png" class="center" alt="Settings menu">
+            
+            <h2>Databases</h2>
+            <p>Upon running <b>Main.py</b> for the first time you are met with a login menu. Here you either sign or or create a new account. This was mainly done as it was a requirement for the coursework, but it also has a helpful feature. Having accounts means tracks and test results can be unique to the user. The <b>SQLite</b> database is stored in a seperate location for the user so they know it is their data.</p>
+            <img src="login.png" class="center" alt="Login menu">
+            <p>This was my best attempt at the time to draw a ERD diagram for the databases in use:</p>
+            <img src="db-relations1.png" class="center" alt="Database relations">
+            <img src="db-relations2.png" class="center" alt="Database relations">
+            <p>I am using vscode to view the databases created from the <b>sqlite3</b> Python module.</p>
+            <p>Here is where the user and all the related data is stored. Passwords are hashed as a requirement for the coursework (and it makes sense for security)</p>
+            <img src="db1.png" class="center" alt="Database table">
+            <p>This is an example of what a user's personal test result database may look like. They can see all the various stats for the individual vehicles and algorithms used within the test environment. The idea here was to provide much flexibility on the data analysis side towards an algorithm comparison of performance.</p>
+            <img src="db2.png" class="center" alt="Database table">
+        </main>
+        
+    </div>
 </body>
 </html>
