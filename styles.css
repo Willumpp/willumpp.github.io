@@ -85,6 +85,24 @@ main h2 {
 }
 
 
+@media only screen and (max-width: 640px) {
+    .image-list .content {
+        grid-column: 1;
+        /* background-color: blue; */
+    }
+
+    /* .image-list .image {
+        grid-column: 1;
+        background-color: red;
+    }
+
+    .image-list {
+        grid-template-columns: 1fr;
+    } */
+  }
+
+
+
 main {
     margin: 10px 2.5%;
 }
@@ -121,6 +139,45 @@ a:active {
     color: pink;
 }
 
+
+.image-list {
+    display: grid;
+    column-gap: 50px;
+    row-gap: 50px;
+
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+/* .image-list > div {
+    background-color: rgb(199, 182, 182);
+} */
+
+.image-list .image {
+    grid-column: 1;
+    min-width: 10%;
+    /* max-width: 50%; */
+}
+
+
+.image-list .content {
+    left: 25%;
+    margin: 1% 1% 8vh;
+    max-width: 50em;
+    grid-column: 2 / span 3;
+}
+
+.image-list img {
+    display: block;
+    border-radius: 10px;
+    max-width:100%;
+    max-height:95px;
+    width: auto;
+    height: auto;
+}
+
+
+
+
 .image-list ul {
     padding: 0;
     list-style-type: none;
@@ -136,23 +193,6 @@ a:active {
     min-height: 11em;
 }
 
-.image-list div {
-    float: left
-}
-
-.image-list .image {
-    height: 100%;
-    margin-right: 1em;
-}
-
-
-.image-list .content {
-    left: 25%;
-    margin: 1% 1% 8vh;
-    max-width: 50em;
-}
-
-
 .image-list .date {
     margin: 0;
     font-size: 1em;
@@ -160,11 +200,4 @@ a:active {
 
 .image-list .image-header {
     margin: 0 0 2px;
-}
-
-.image-list img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    border-radius: 10px;
 }
